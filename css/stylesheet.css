@@ -205,7 +205,8 @@ img {
   position: relative;
   opacity: 5;
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
+  background-size: 1024px 1366px;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -368,6 +369,17 @@ img {
 */
 
 @media (min-width: 768px) {
+  .parallax1,
+  .parallax2,
+  .parallax3 {
+    position: relative;
+    opacity: 5;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   .logo {
     block-size: 60px;
   }
