@@ -265,8 +265,8 @@ img {
 .mylinks {
   display: inline-block;
   font-weight: bolder;
-  padding: 15px;
-  font-size: 11px;
+  padding: 10px;
+  font-size: 13px;
 }
 
 /* 
@@ -276,10 +276,10 @@ img {
 */
 
 .logo {
-  position: sticky;
+  position: absolute;
   top: 40%;
   width: 100%;
-  height: auto;
+  min-height: 50vh;
 }
 
 /* 
@@ -368,10 +368,12 @@ img {
   }
 
   .mylinks {
+    display: inline-block;
     font-weight: bolder;
     padding: 15px;
     font-size: 20px;
   }
+
   .grid {
     display: flex;
   }
