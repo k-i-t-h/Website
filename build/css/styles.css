@@ -172,19 +172,19 @@ img {
 */
 
 .parallax1 {
-  background: url("/build/img/img1.jpg");
+  background: url("/build/img/img1\ small.jpg");
   min-height: 100%;
   background-color: #f7f7f7;
 }
 
-.parallax2 {
-  background: url("/build/img/img3.jpg");
+/* .parallax2 {
+  background: url("/build/img/img2\ small.jpg");
   min-height: 60%;
   background-color: #f7f7f7;
-}
+} */
 
 .parallax3 {
-  background: url("/build/img/img2.jpg");
+  background: url("/build/img/img2\ small.jpg");
   min-height: 100%;
   background-color: #f7f7f7;
 }
@@ -197,7 +197,7 @@ img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 /* 
@@ -335,6 +335,7 @@ img {
   font-weight: bolder;
   padding: 10px;
   padding-top: 0;
+  padding-bottom: 1.5em;
 }
 
 .card-link {
@@ -353,11 +354,28 @@ img {
 
 /* 
 ------------------------------------
-3.1.0 @media (min-width: 600px)
+3.1.0 @media (min-width: 768px)
 ------------------------------------ 
 */
 
 @media (min-width: 768px) {
+  .parallax1 {
+    background: url("/build/img/img1.jpg");
+
+    background-color: #f7f7f7;
+  }
+
+  .parallax2 {
+    background: url("/build/img/img3.jpg");
+    min-height: 60%;
+    background-color: #f7f7f7;
+  }
+
+  .parallax3 {
+    background: url("/build/img/img2.jpg");
+
+    background-color: #f7f7f7;
+  }
   .parallax1,
   .parallax2,
   .parallax3 {
