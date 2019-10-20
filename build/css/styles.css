@@ -13,7 +13,7 @@
 1.2 nav
 1.3 section
 1.4 a (anchor tags)
-1.5 h2
+1.5 h1
 1.6 img(logo)
 
 
@@ -138,11 +138,11 @@ a:hover {
 
 /* 
 ------------------------------------
-1.5 h3(::before & ::after)
+1.5 h1
 ------------------------------------ 
 */
 
-h2 {
+h1 {
   padding: 0;
   line-height: 1.5em;
 }
@@ -323,7 +323,7 @@ img {
 }
 
 .card-image {
-  height: 150px;
+  height: 90px;
   width: 100%;
   object-fit: contain;
   border-top-right-radius: 10px;
@@ -404,17 +404,22 @@ img {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     background: white;
+    height: 110px;
   }
 
   .card-text {
     font-weight: bolder;
     padding: 1.5em;
-    padding-top: 0;
   }
 
-  h2,
-  p,
-  .vibepost {
-    margin: 0 50px;
+  .grid,
+  section {
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .marginalized {
+    margin: 50px auto;
+    width: 60vw;
   }
 }
