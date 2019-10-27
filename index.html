@@ -4,144 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Cousine&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="build/css/styles.min.css" />
-    <!-- CSS LOCAL -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- FONT AWESOME  ^ -->
-    <title>KITH LAMAR | INDEX</title>
+    <link rel="stylesheet" href="/build/css/styles.min.css" />
+    <!-- MAIN CSS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQUERY -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <!-- SCROLLMAGIC -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
+      integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
+      crossorigin="anonymous"
+    ></script>
+    <!--  SCROLL MAGIC INDICATORS -->
+    <script src="/build/js/scripts.min.js"></script>
+    <!-- MAIN JS -->
+    <title>Play</title>
   </head>
   <body>
     <!-- NAV -->
-    <nav class="navbar">
-      <ul>
-        <li class="navbar-links">
-          <a href="https://github.com/qO-OpZzZzZz" target="_blank"
-            ><i class="fa fa-github"></i>
-            GitHub
-          </a>
-        </li>
-        <li class="navbar-links">
-          <a href="/pdf/Resumé.pdf" target="_blank"
-            ><i class="fa fa-briefcase"></i>
-            Resumé
-          </a>
-        </li>
-        <li class="navbar-links">
-          <a href="mailto:kief.lamar20@gmail.com" target="_blank"
-            ><i class="fa fa-envelope"></i>
-            E-mail
-          </a>
-        </li>
+    <header class="header">
+      <a href="" class="main-logo">KITH LAMAR</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon"
+        ><span class="nav-icon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="https://kithlamar.com">Home</a></li>
+        <li><a href="https://github.com/k-i-t-h">GitHub</a></li>
+        <li><a href="mailto:kief.lamar20@gmail.com">Contact</a></li>
       </ul>
-    </nav>
-    <!-- PARALLAX-1 -->
-    <div class="parallax1">
-      <div class="logo">
-        <img class="img" src="img/logo.gif" alt="K I T H </> L A M A R" />
-      </div>
-    </div>
+    </header>
 
-    <section>
-      <hr />
-      <h1 class="marginalized">
-        "Passionate about designing visually enticing content. An aspiring,
-        self-taught web developer with an insatiable hunger for learning."
-      </h1>
-      <hr />
-    </section>
-    <!-- PARALLAX-2
-    <div class="parallax2">
-      <div class="heading">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <nobr class="vibe">V I B E</nobr>
-          <sup><em>Post</em></sup>
-        </a>
-      </div>
-    </div>
-    <section class="vibepost">
-      <hr />
-      <h1>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <nobr class="vibe">V I B E</nobr>
-          <sup><em>Post</em></sup>
-        </a>
-        is an imageboard website that's creativity-centric.
-      </h1>
-      <hr />
+    <!-- SUPER-HERO -->
+    <div id="super-hero">
       <p>
-        A site that allows users showcase their most recent projects and and
-        achievements through images; users interact by choosing between three
-        voting options on whether they like "thumbs up", dislike "thumbs down"
-        or if the post is not impressive there's a "meh" option as well. <br />
+        <strong class="super-hero-msg">
+          well done<br />
+          is always <br />
+          better than <br />
+          well said
+        </strong>
+        <br />
+        <!-- <sup class="hover-to-show">&nbsp; - Benjamin Franklin</sup> -->
       </p>
-
-      <hr />
-      Interested? Click
-      <a href="http://" target="_blank" rel="noopener noreferrer"
-        ><u>here</u></a
-      >
-      for more.
-    </section> -->
-
-    <!-- PARALLAX-3 -->
-    <div class="parallax3">
-      <section>
-        <h1 class="marginalized">Learning Platforms</h1>
-        <p class="marginalized">
-          Being that there are multiple ways of learning and keeping up with the
-          fast-paced industry of software development and technology as a whole;
-          these learning platforms help me stay up to date, hone my skills and
-          review certain topics in the realm of software development.
-        </p>
-      </section>
-      <div class=" grid">
-        <div class="card">
-          <img class="card-image" src="build/img/HackerRank.png" />
-          <a
-            class="card-link"
-            href="https://www.hackerrank.com/ZzZzqo_op"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h4>View My Account</h4></a
-          >
-          <p class="card-text">
-            HackerRank is a technology hiring platform that is the standard for
-            assessing developer skills for over 1,500+ companies around the
-            world. By enabling tech recruiters and hiring managers to
-            objectively evaluate talent at every stage of the recruiting
-            process, HackerRank helps companies hire skilled developers and
-            innovate faster.
-          </p>
-        </div>
-        <div class="card">
-          <img class="card-image" src="build/img/SoloLearn.png" />
-          <a
-            class="card-link"
-            href="https://www.sololearn.com/Profile/15047155"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h4>View My Account</h4></a
-          >
-          <p class="card-text">
-            SoloLearn is a mobile social platform where everyone can learn
-            coding. It breaks the stereotypes of institutional
-            instructor-centric learning and creates a student-centric open
-            platform that provides a unique learning experience you never had
-            before.
-          </p>
-        </div>
-      </div>
     </div>
-    <div class="parallax4"></div>
+
+    <!-- HERO MESSAGE -->
+    <div id="hero" class="heroScene">
+      <p>
+        <strong
+          >A passionate<br />
+          web designer<br />
+        </strong>
+        <br />
+        <sup class="heroSub"> ALWAYS HUNGRY FOR MORE</sup>
+      </p>
+    </div>
+
+    <!-- CARD -->
+    <div class="cardContainer">
+      <section class="section1 section">
+        <span class="card">
+          <div id="logo1"></div>
+          <h3>Front-end</h3>
+          <p>
+            I've been focused on learning CSS3, HTML5 and frameworks such as
+            JQuery, Bulma, Bootstrap and React. Most of the tools I'm using are "Front-end" centric mostly because of my <a href="https://kithlamar.wordpress.com/my-sketches/" target="_blank" rel="noopener noreferrer">art</a> background.
+          </p>
+        </span>
+      </section>
+      <section class="section2 section">
+        <span class="card">
+          <div id="logo2"></div>
+          <h3>Back-end</h3>
+          <p>
+            Though most of my tools are for the client side, my "Back-end" tools
+            and experiences are in SQL for database, Git on my <a href="https://github.com/k-i-t-h" target="_blank" rel="noopener noreferrer">GitHub</a> which is a <a href="https://en.wikipedia.org/wiki/Version_control" target="_blank" rel="noopener noreferrer">Version Control System,</a>  programming languages such
+            as Ruby, JavaScript and Python.
+          </p>
+        </span>
+      </section>
+      <section class="section3 section">
+        <span class="card">
+          <div id="logo3"></div>
+          <h3>Learning</h3>
+          <p>
+            Since I am self-taught (aren't we all at some point?) I utilize any
+            learning platforms that I could get my hands on. You can check-out
+            my
+            <a href="https://www.hackerrank.com/ZzZzqo_op" target="_blank" rel="noopener noreferrer"
+              >HackerRank</a
+            >
+            or my
+            <a href="https://www.sololearn.com/Profile/15047155" target="_blank" rel="noopener noreferrer"
+              >SoloLearn</a
+            >
+            for more.
+          </p>
+        </span>
+      </section>
+      <section class="section4 section">
+        <span class="card">
+          <div id="logo4"></div>
+          <h3>Contact</h3>
+          <p>
+            I'm currently based in Europe. The best way to get a
+            hold of me is through my
+            <a href="mailto: kief.lamar20@gmail.com" target="_blank" rel="noopener noreferrer"
+              >e-mail.</a
+            >
+            I'm open for freelance projects and maybe some creative-collaboration. Let me
+            know what you have in mind. &#128578
+          </p>
+        </span>
+      </section>
+    </div>
   </body>
 </html>

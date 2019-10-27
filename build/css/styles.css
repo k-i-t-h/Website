@@ -1,443 +1,403 @@
-/* 
-------------------------------------
-
-        Table of Contents
-
-------------------------------------
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*********** 1.0 GLOBAL ************
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1.1 body,html
-1.2 nav
-1.3 section
-1.4 a (anchor tags)
-1.5 h1
-1.6 img(logo)
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*********** 2.0 CLASSES ***********
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-2.1 .parallax1,.parallax2,.parallax3
-2.2 .heading
-2.3 .two-col (Columns)
-2.4 .vibepost (section)
-2.5 .navbar & navbar-links
-2.6 .logo (top-gif-logo "KITH LAMAR")
-2.7 vibe (vibepost font)
-2.8 .grid
-2.9 .card .card-image .card-text 
-.card-link
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-******** 3.0 MEDIA QUERIES *********
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-3.1.0 @media (max-width: 768px)
-  3.1.1 .logo
-  3.1.2 .heading
-  3.1.3 .navbar-links
-
-------------------------------------
-
-        Table of Contents
-
-------------------------------------
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*********** 1.0 GLOBAL ************
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-------------------------------------
-1.0 body,html (Global)
------------------------------------- 
-*/
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body,
 html {
-  font-size: 16px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #000000; */
+  background: rgb(27, 27, 27);
   width: 100%;
-  height: 100%;
-  margin: 0 0;
-  padding: 0 0;
+  margin: 0px;
+  padding: 0px;
   overflow-x: hidden;
-  font-family: "Cousine", monospace;
-  line-height: 1.5em;
-  columns: #666666;
+}
+
+h3 {
   text-align: center;
+  padding: 25px;
+}
+/* MAIN-LOGO */
+.main-logo {
+  display: block;
+  float: left;
+  font-size: 23px;
+  background-color: black;
   font-weight: bolder;
-  color: black;
-}
-
-/* 
-------------------------------------
-1.2 Nav & .navbar
------------------------------------- 
-*/
-nav {
-  margin-top: 0;
-  background-color: rgb(0, 0, 0);
-  position: fixed;
-  z-index: 1;
-  list-style: none;
-  line-height: 0;
-  width: 100%;
-}
-
-ul {
-  display: inline-block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
+  color: rgb(253, 144, 1);
   margin: 10px 0;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
-nav a {
-  color: #fff;
-  padding: 15px 5px;
-}
-nav a:hover {
-  color: black;
-  background-color: #fff;
-  padding: 15px 5px;
-  border-radius: 5px;
+.main-logo:hover {
+  background: -webkit-linear-gradient(
+    rgb(255, 145, 0),
+    rgba(255, 51, 0, 0.671)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* 
-------------------------------------
-1.3 section
------------------------------------- 
-*/
-
-section {
-  overflow: auto;
-  padding: 20px 20px;
-}
-
-/* 
-------------------------------------
-1.4 a (anchor tags)
------------------------------------- 
-*/
-
+/* NAV */
 a {
-  color: #000;
+  color: rgb(253, 144, 1);
   text-decoration: none;
 }
 
-a:hover {
-  color: darkorange;
+.header {
+  overflow: hidden;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
-
-/* 
-------------------------------------
-1.5 h1
------------------------------------- 
-*/
-
-h1 {
+.header ul {
+  margin: 0;
   padding: 0;
-  line-height: 1.5em;
+  list-style: none;
+  overflow: hidden;
+  background-color: #020202;
 }
 
-/* 
-------------------------------------
-1.6 img(logo)
------------------------------------- 
-*/
-img {
-  width: 300px;
+.header ul a {
+  display: block;
+  outline: 1px solid rgb(41, 41, 41);
+  padding: 20px;
+  border-right: 1px solid #aaaaaa;
+  font-weight: bolder;
+  text-align: center;
 }
 
-/* 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-*********** 2.0 CLASSES ***********
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-------------------------------------
-2.1 Parallax's 
-{
-.parallax1,
-.parallax2,
-.parallax3
-}
------------------------------------- 
-*/
-
-.parallax1 {
-  background: url("/build/img/img1\ small.jpg");
-  min-height: 100%;
-  background-color: #f7f7f7;
+.header ul a:hover {
+  color: black;
+  background: rgb(195, 34, 74);
+  background: linear-gradient(
+    0deg,
+    rgba(195, 34, 74, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  border-radius: 2rem;
+  animation: anim 0.5s ease-out;
 }
 
-/* .parallax2 {
-  background: url("/build/img/img2\ small.jpg");
-  min-height: 60%;
-  background-color: #f7f7f7;
-} */
-
-.parallax3 {
-  background: url("/build/img/img2\ small.jpg");
-  min-height: 100%;
-  background-color: #f7f7f7;
+@keyframes anim {
+  0% {
+    opacity: 0;
+    border-radius: 0rem;
+  }
+  100% {
+    opacity: 1;
+    border-radius: 2rem;
+  }
 }
 
-.parallax1,
-.parallax2,
-.parallax3 {
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.menu-icon {
+  padding: 28px 20px;
   position: relative;
-  opacity: 5;
-  background-position: center;
+  float: right;
+  cursor: pointer;
+}
+
+.nav-icon {
+  background: rgb(253, 144, 1);
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.nav-icon:before,
+.nav-icon:after {
+  background: rgb(253, 144, 1);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+.nav-icon:before {
+  top: 5px;
+}
+.nav-icon:after {
+  top: -5px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  max-height: 290px;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* SUPER HERO */
+
+#super-hero {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+  animation: primaryFade 3s forwards 0s ease-out;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  place-content: center;
+  background: rgb(180, 153, 58);
+  background: linear-gradient(
+    0deg,
+    rgba(180, 153, 58, 1) 0%,
+    rgba(218, 68, 68, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  animation: primaryFade 4s ease-out;
+}
+.super-hero-msg {
+  background: -webkit-linear-gradient(rgb(255, 115, 0), rgb(192, 20, 20));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  line-height: 1;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.super-hero-msg:hover {
+  animation: 2000ms 2000ms 0 infinite;
+}
+
+@keyframes primaryFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(xx);
+    opacity: 1;
+  }
+}
+
+/* HERO */
+#hero {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#hero strong {
+  font-size: 3rem;
+  line-height: 1;
+  color: rgb(253, 144, 1);
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  text-decoration: none;
+}
+.heroScene {
+  opacity: 0;
+}
+.heroScene.fade-in {
+  opacity: 0.9;
+  background-image: url("/images/dark\ bldgs.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  background-position: center center;
+  letter-spacing: 5px;
+  transition: all 2.5s ease-in-out 0.7s;
 }
-
-/* 
-------------------------------------
-2.2 .heading (VIBE Post)
------------------------------------- 
-*/
-
-.heading {
-  position: absolute;
-  top: 45%;
-  width: 100%;
-  font-size: 200%;
-  text-shadow: 0 0 1000px rgb(0, 0, 0);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.heading a {
-  color: #000;
-  text-decoration: none;
-}
-.heading a:hover {
-  text-shadow: 0 0 1000px rgb(255, 255, 255);
-}
-
-/* 
-------------------------------------
-2.3 .two-col (Columns)
------------------------------------- 
-*/
-
-.two-col {
-  float: left;
-  width: 42%;
-  padding: 0 4%;
-  text-align: left;
-}
-
-/* 
-------------------------------------
-2.4 .vibepost (section)
------------------------------------- 
-*/
-
-.vibepost {
-  overflow: auto;
-  padding: 20px 20px;
-  background-color: #fff;
-  color: rgb(53, 53, 53);
-}
-
-/* 
-------------------------------------
-2.5 .navbar & navbar-links
------------------------------------- 
-*/
-
-.navbar {
-  overflow: auto;
-  padding: 15px 0px;
-}
-
-.navbar-links {
-  display: inline-block;
+.heroSub {
+  text-shadow: 1px 2px 5px rgb(0, 0, 0);
+  color: rgb(255, 123, 0);
+  font-size: 19px;
   font-weight: bolder;
-  padding: 0 3px;
-  font-size: 16px;
+  letter-spacing: 2.5px;
 }
 
-/* 
-------------------------------------
-2.6 .logo (top-gif-logo "KITH LAMAR")
------------------------------------- 
-*/
-
-.logo {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  min-height: 50vh;
+.section1,
+.section2,
+.section3,
+.section4 {
+  padding: 1rem 0rem;
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  transition: all 2.5s ease-out;
+  background: rgb(27, 27, 27);
+  opacity: 0;
 }
-
-/* 
-------------------------------------
-2.7 vibe (vibepost font)
------------------------------------- 
-*/
-
-.vibe {
-  font-weight: bolder;
+.section1.fade-in,
+.section2.fade-in,
+.section3.fade-in,
+.section4.fade-in {
+  opacity: 1;
+  background: rgb(180, 153, 58);
+  background: radial-gradient(
+    circle,
+    rgba(180, 153, 58, 1) 0%,
+    rgba(218, 68, 68, 1) 15%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
-
-/* 
-------------------------------------
-2.8 .grid
------------------------------------- 
-*/
-
-.grid {
-  padding: 2em 1em 1em;
-  margin: 0;
-  justify-content: space-around;
-}
-
-/* 
-------------------------------------
-2.9 .card .card-image .card-text 
-.card-link
------------------------------------- 
-*/
-.card .card-image .card-text {
-  position: relative;
-}
-
 .card {
-  background-color: white;
+  max-width: 300px;
+  margin: 0 15px;
+  padding: 25px 10px;
+  background-color: black;
+  box-shadow: 5px 5px 15px black;
+  opacity: 0.9;
   border-radius: 10px;
-  margin: 0;
-  padding: 0;
-  height: auto;
-  box-shadow: 0 4px 8px 0 black;
-  opacity: 0.69;
 }
 
-.card-image {
-  height: 90px;
-  width: 100%;
-  object-fit: contain;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  background: white;
+#logo1,
+#logo2,
+#logo3,
+#logo4 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(253, 144, 1);
+  margin: 0 auto;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 25px;
 }
 
-.card-text {
-  font-weight: bolder;
-  padding: 10px;
-  padding-top: 0;
-  padding-bottom: 1.5em;
+#logo1 {
+  background-image: url("/images/mobile.png");
 }
 
-.card-link {
-  margin: 0;
-  padding-bottom: 0;
-  text-decoration-line: underline;
+#logo2 {
+  background-image: url("/images/dbase.png");
+}
+#logo3 {
+  background-image: url("/images/study.png");
+}
+#logo4 {
+  background-image: url("/images/d.png");
 }
 
-.card-link h3 {
-  margin-top: 0;
+p {
+  padding: 0 30px;
+  font-size: 20px;
+  border-radius: 20px;
+  color: whitesmoke;
+  margin: 0 auto;
+  line-height: 1.5em;
+  text-shadow: 15px 15px 25px black;
 }
-/* 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-******** 3.0 MEDIA QUERIES *********
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
-/* 
-------------------------------------
-3.1.0 @media (min-width: 768px)
------------------------------------- 
-*/
-
-@media (min-width: 768px) {
-  .parallax1 {
-    background: url("/build/img/img1.jpg");
-
-    background-color: #f7f7f7;
+@media (min-width: 48em) {
+  .header li {
+    float: left;
   }
 
-  .parallax2 {
-    background: url("/build/img/img3.jpg");
-    min-height: 60%;
-    background-color: #f7f7f7;
+  .header li a {
+    margin: 5px 0;
+    padding: 20px 30px;
   }
 
-  .parallax3 {
-    background: url("/build/img/img2.jpg");
-
-    background-color: #f7f7f7;
-  }
-  .parallax1,
-  .parallax2,
-  .parallax3 {
-    position: relative;
-    opacity: 5;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  .header .menu {
+    float: right;
+    clear: none;
+    max-height: none;
+    margin-right: 10px;
   }
 
-  .logo {
-    block-size: 60px;
-  }
-  .heading {
-    font-size: 350%;
+  .menu-icon {
+    display: none;
   }
 
-  .navbar {
-    overflow: auto;
-    padding: 0px 0px;
+  .header ul {
+    background-color: black;
   }
-  .navbar-links {
-    display: inline-block;
-    font-weight: bolder;
-    padding: 15px;
-    font-size: 18px;
+  .header ul a {
+    border: none;
+    outline: none;
+    border-radius: 5rem;
   }
 
-  .grid {
-    display: flex;
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    margin: 15px;
+  }
+  .section1.fade-in,
+  .section2.fade-in,
+  .section3.fade-in,
+  .section4.fade-in {
+    background: rgb(180, 153, 58);
+    background: radial-gradient(
+      circle,
+      rgba(180, 153, 58, 1) 0%,
+      rgba(218, 68, 68, 1) 15%,
+      rgba(252, 176, 69, 1) 100%
+    );
   }
 
   .card {
-    width: 48%;
-    border-radius: 10px;
-    height: auto;
+    min-height: 600px;
+  }
+}
+
+@media (min-width: 999px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    margin: 0;
   }
 
-  .card-image {
-    min-height: 5px;
-    width: 100%;
-    object-fit: contain;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    background: white;
-    height: 110px;
+  #logo1,
+  #logo2,
+  #logo3,
+  #logo4 {
+    width: 75px;
+    height: 75px;
+    background-size: 35px;
+    margin-bottom: 15px;
+  }
+  .section1.fade-in,
+  .section2.fade-in,
+  .section3.fade-in,
+  .section4.fade-in {
+    padding: 20px 0;
+    min-width: 250px;
+  }
+  p {
+    padding: 0 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: whitesmoke;
+    margin: 0;
+    line-height: 1.2em;
   }
 
-  .card-text {
-    font-weight: bolder;
-    padding: 1.5em;
-  }
-
-  .grid,
-  section {
-    width: 85vw;
-    margin: 0 auto;
-  }
-
-  .marginalized {
-    margin: 50px auto;
-    width: 60vw;
+  .card {
+    min-height: 500px;
   }
 }
