@@ -2,6 +2,7 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -51,6 +52,7 @@ a {
 .header {
   overflow: hidden;
   background-color: black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1);
   box-shadow: rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -76,13 +78,32 @@ a {
 .header ul a:hover {
   color: black;
   background: rgb(195, 34, 74);
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(195, 34, 74, 1)),
+    to(rgba(253, 187, 45, 1))
+  );
   background: linear-gradient(
     0deg,
     rgba(195, 34, 74, 1) 0%,
     rgba(253, 187, 45, 1) 100%
   );
   border-radius: 2rem;
+  -webkit-animation: anim 0.5s ease-out;
   animation: anim 0.5s ease-out;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+    border-radius: 0rem;
+  }
+  100% {
+    opacity: 1;
+    border-radius: 2rem;
+  }
 }
 
 @keyframes anim {
@@ -99,6 +120,7 @@ a {
 .header .menu {
   clear: both;
   max-height: 0;
+  -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
 }
 
@@ -115,6 +137,7 @@ a {
   height: 2px;
   width: 18px;
   position: relative;
+  -webkit-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out;
 }
 
@@ -126,6 +149,7 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
+  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .nav-icon:before {
@@ -147,10 +171,12 @@ a {
   background: transparent;
 }
 .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 0;
 }
 .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 0;
 }
@@ -162,18 +188,28 @@ a {
   place-items: center;
   height: 100vh;
   background-color: black;
+  -webkit-animation: primaryFade 3s forwards 0s ease-out;
   animation: primaryFade 3s forwards 0s ease-out;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   place-content: center;
   background: rgb(180, 153, 58);
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(180, 153, 58, 1)),
+    color-stop(0%, rgba(218, 68, 68, 1)),
+    to(rgba(252, 176, 69, 1))
+  );
   background: linear-gradient(
     0deg,
     rgba(180, 153, 58, 1) 0%,
     rgba(218, 68, 68, 1) 0%,
     rgba(252, 176, 69, 1) 100%
   );
+  -webkit-animation: primaryFade 4s ease-out;
   animation: primaryFade 4s ease-out;
 }
 .super-hero-msg {
@@ -187,7 +223,19 @@ a {
 }
 
 .super-hero-msg:hover {
+  -webkit-animation: 2000ms 2000ms 0 infinite;
   animation: 2000ms 2000ms 0 infinite;
+}
+
+@-webkit-keyframes primaryFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(xx);
+    transform: rotate(xx);
+    opacity: 1;
+  }
 }
 
 @keyframes primaryFade {
@@ -195,6 +243,7 @@ a {
     opacity: 0;
   }
   100% {
+    -webkit-transform: rotate(xx);
     transform: rotate(xx);
     opacity: 1;
   }
@@ -224,6 +273,7 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   letter-spacing: 5px;
+  -webkit-transition: all 2.5s ease-in-out 0.7s;
   transition: all 2.5s ease-in-out 0.7s;
 }
 .heroSub {
@@ -242,6 +292,7 @@ a {
   min-width: 100%;
   display: grid;
   place-items: center;
+  -webkit-transition: all 2.5s ease-out;
   transition: all 2.5s ease-out;
   background: rgb(27, 27, 27);
   opacity: 0;
@@ -264,6 +315,7 @@ a {
   margin: 0 15px;
   padding: 25px 10px;
   background-color: black;
+  -webkit-box-shadow: 5px 5px 15px black;
   box-shadow: 5px 5px 15px black;
   opacity: 0.9;
   border-radius: 10px;

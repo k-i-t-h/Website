@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   // Configurations
   var pngquant = require("imagemin-pngquant");
   var mozjpeg = require("imagemin-mozjpeg");
