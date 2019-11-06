@@ -49,6 +49,10 @@ a {
   text-decoration: none;
 }
 
+p > a:hover {
+  color: rgb(253, 102, 1);
+}
+
 .header {
   overflow: hidden;
   background-color: black;
@@ -320,6 +324,13 @@ a {
   opacity: 0.9;
   border-radius: 10px;
 }
+span {
+  transition: 0.3s ease;
+}
+
+span:hover {
+  transform: scale(1.05);
+}
 
 #logo1,
 #logo2,
@@ -387,7 +398,7 @@ p {
   .header ul a {
     border: none;
     outline: none;
-    border-radius: 5rem;
+    border-radius: 1rem;
   }
 
   .cardContainer {
